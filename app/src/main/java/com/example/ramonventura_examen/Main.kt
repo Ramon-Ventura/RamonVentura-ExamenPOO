@@ -6,10 +6,11 @@ fun main(){
         print("Ingrese el piso al que desea ir: ")
         val pisoUsuario: String? = readLine()
         if (pisoUsuario != null) {
-            if(pisoUsuario.toInt()>elevador.piso){
-                elevador.Subir(pisoUsuario.toInt())
-            }else{
-
+            if(pisoUsuario.toInt() in 1..15){
+                elevador.subirBajar(pisoUsuario.toInt())
+            }
+            else{
+                println("RANGO NO VALIDO")
             }
         }
     }
